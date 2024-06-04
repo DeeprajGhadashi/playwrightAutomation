@@ -17,7 +17,7 @@
    - view -> command palette..-> test: Insatll playwright
    - select all check box -> ok
   
-Installing Playwright :-
+Documentation of Playwright :-
 https://playwright.dev/docs/intro
       
       
