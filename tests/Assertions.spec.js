@@ -11,7 +11,9 @@ test('AssertionTest', async({page})=>{
     //2) expect(page).toHaveTitle() -- page has title is correct or not
     await expect(page).toHaveTitle('nopCommerce demo store. Register');
 
-
+    //3) expect(locator).toBeVisible() -- Element is Visible or not
+    const logoElement = await page.locator('.header-logo');
+    await expect(logoElement).toBeVisible();
 
 
 
