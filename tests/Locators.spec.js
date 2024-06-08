@@ -9,17 +9,16 @@ test ('Locators', async ({page})=>{
      await page.click('id=login2');     //approach 2
 
      //provide usename  - used CSS
-    //await page.locator('#loginusername').fill("pavanol");
+    //await page.locator('#loginusername').fill('pavanol');
      await page.fill('#loginusername','pavanol');
-     
-
+       
      //provide password - used CSS
      await page.fill("input[id='loginpassword']",'test@123')
 
-     //Click on login button - used Xpath
+     //Click on login button - used XPath
      await page.click("//button[normalize-space()='Log in']");
 
-     //verify logout link presence
+     //verify logout link presence - used XPath
      const logoutlink = await page.locator("//a[normalize-space()='Log out']")
      await expect( logoutlink).toBeVisible();
      await page.close();
