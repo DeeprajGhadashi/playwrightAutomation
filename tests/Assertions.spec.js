@@ -15,7 +15,9 @@ test('AssertionTest', async({page})=>{
     const logoElement = await page.locator('.header-logo');
     await expect(logoElement).toBeVisible();
 
-
+    //4) expect(locator).toBeEnabled()   -- control is enabled 
+    const serchStoreBox = await page.locator('#small-searchterms');
+    await expect(serchStoreBox).toBeEditable();
 
 
 
