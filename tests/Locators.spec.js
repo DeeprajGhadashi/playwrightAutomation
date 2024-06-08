@@ -19,4 +19,9 @@ test ('Locators', async ({page})=>{
      //Click on login button - used Xpath
      await page.click("//button[normalize-space()='Log in']");
 
+     //verify logout link presence
+     const logoutlink = await page.locator("//a[normalize-space()='Log out']")
+     await expect( logoutlink).toBeVisible();
+     await page.close();
+
 })
