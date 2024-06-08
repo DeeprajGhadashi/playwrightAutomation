@@ -19,6 +19,16 @@ test('AssertionTest', async({page})=>{
     const serchStoreBox = await page.locator('#small-searchterms');
     await expect(serchStoreBox).toBeEditable();
 
+    //5) expect(locator).toBeChecked()   -- Radio/Checkbox is checked or not
+    
+    //radio button
+    const maleRadioButton = await page.locator('#gender-male')
+    await maleRadioButton.click() // select radio button
+    await expect(maleRadioButton).toBeChecked()
+
+    //check box
+     const newsletterCheckbox = await page.locator('#Newsletter');
+     await expect(newsletterCheckbox).toBeChecked();
 
 
 
