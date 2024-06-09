@@ -30,6 +30,9 @@ test('AssertionTest', async({page})=>{
      const newsletterCheckbox = await page.locator('#Newsletter');
      await expect(newsletterCheckbox).toBeChecked();
 
+     //6) expect(loactor).toHaveAttribute()   -- Element has attribute
+     const regButton = await page.locator('#register-button')
+     await expect(regButton).toHaveAttribute('type','submit');
 
 
 })
