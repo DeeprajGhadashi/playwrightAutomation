@@ -45,7 +45,9 @@ test('AssertionTest', async({page})=>{
      await emailInput.fill('test@demo.com');
      await expect(emailInput).toHaveValue('test@demo.com');
 
-
+     //10) expect(loactor).toHaveCount() -- List of elements has given length
+     const options = await page.locator('select[name="DateOfBirthMonth"] option')
+     await expect(options).toHaveCount(13) 
 
 
 
