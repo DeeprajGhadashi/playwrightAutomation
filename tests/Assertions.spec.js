@@ -35,10 +35,18 @@ test('AssertionTest', async({page})=>{
      await expect(regButton).toHaveAttribute('type','submit');
 
      //7) expect(loactor).toHaveText()    -- Element matches text  
-     await expect( await page.locator('.page-title h1')).toHaveText('Register');
+     await expect( await page.locator('.page-title h1')).toHaveText('Register');  //full text
 
      //8) expect(loactor).toContainText()    -- Element contains text (add partial text for above same case)
-     await expect(await page.locator('.page-title h1')).toContainText('Reg');
+     await expect(await page.locator('.page-title h1')).toContainText('Reg');   //partial text
+     
+     //9) expect(loactor).toHaveValue(value)  -- Input has a value is same or not is check
+     const emailInput = await page.locator('#Email');
+     await emailInput.fill('test@demo.com');
+     await expect(emailInput).toHaveValue('test@demo.com');
+
+
+
 
 
 
