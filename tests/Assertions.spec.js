@@ -34,5 +34,9 @@ test('AssertionTest', async({page})=>{
      const regButton = await page.locator('#register-button')
      await expect(regButton).toHaveAttribute('type','submit');
 
+     //7) expect(loactor).toHaveText()    -- Element matches text
+       await expect( await page.locator('.page-title h1')).toHaveText('Register');
+       
+     
 
 })
