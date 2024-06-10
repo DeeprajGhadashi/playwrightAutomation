@@ -15,10 +15,11 @@ test('Handle dropdowns',async ({page})=> {
     /*const options = await page.locator('#country option')
       await expect(options).toHaveCount(9);
     */
-   
+
     //2) check number of options in dropdown -- Approach 2
     const options = await page.$$('#country option')
-    console.log("Number of options:", options.length)
+    //console.log("Number of options:", options.length)
+    await expect(options.length).toBe(10);
 
 
 
