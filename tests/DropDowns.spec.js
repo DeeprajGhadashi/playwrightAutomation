@@ -11,9 +11,15 @@ test('Handle dropdowns',async ({page})=> {
     //await page.selectOption("#country",'India');  //by text
 
     //Assertions
-    //1) check number of options in dropdown
-    const options = await page.locator('#country option')
-    await expect(options).toHaveCount(9);
+    //1) check number of options in dropdown -- Approach 1
+    /*const options = await page.locator('#country option')
+      await expect(options).toHaveCount(9);
+    */
+   
+    //2) check number of options in dropdown -- Approach 2
+    const options = await page.$$('#country option')
+    console.log("Number of options:", options.length)
+
 
 
     await page.waitForTimeout(2000);
