@@ -17,6 +17,10 @@ test("Handle dropdowns",async ({page})=>{
     //console.log("Number of options:",options.length)
     //await expect(options.length).toBe(5);
 
+    //3) check presence of value in the dropdown
+    const content=await page.locator('#colors').textContent()
+    //await expect(content.includes('Black')).toBeTruthy();  // black is not present then failed
+    await expect(content.includes('Black')).toBeFalsy;     //passed
 
      await page.waitForTimeout(5000);
 })
