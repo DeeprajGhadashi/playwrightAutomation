@@ -17,9 +17,14 @@ test ('Handle checkboxes', async({page}) =>{
                           "//input[@id='saturday' and @type='checkbox']"
                         ];
 
-    for(const locator of checkboxeLocators )
+    for(const locator of checkboxeLocators )   //select multiple checkboxes
     {
         await page.locator(locator).check();
+    }
+
+    for(const locator of checkboxeLocators )   //unselect multiple checkboxes which are already selected
+    {
+        await page.locator(locator).uncheck();
     }
 
     await page.waitForTimeout(5000);
