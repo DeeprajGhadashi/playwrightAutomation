@@ -6,8 +6,12 @@ test('Bootstrap dropdown', async ({page}) =>{
     await page.locator('.multiselect').click() // click on the dropdown
 
     //1) check number of options in dropdown
-    const options=await page.locator('ul>li label input')
-    await expect(options).toHaveCount(11);
+    //const options=await page.locator('ul>li label input')
+    //await expect(options).toHaveCount(11);
+
+    //2) check number of options in dropdown  -- using length Assertion
+    const options=await page.$$('ul>li label input')
+    await expect(options.length).toBe(11)
 
 
     await page.waitForTimeout(5000);
