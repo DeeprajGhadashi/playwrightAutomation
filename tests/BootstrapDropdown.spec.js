@@ -10,8 +10,22 @@ test('Bootstrap dropdown', async ({page}) =>{
     //await expect(options).toHaveCount(11);
 
     //2) check number of options in dropdown  -- using length Assertion
-    const options=await page.$$('ul>li label input')
-    await expect(options.length).toBe(11)
+    //const options=await page.$$('ul>li label input')
+    //await expect(options.length).toBe(11)
+
+   //3) select options from dropdown
+   const options=await page.$$('ul>li label')
+    for(let option of options)
+    {
+        const value=await option.textContent();
+        console.log("value is",value)
+        if(value.includes('Angular') || value.includes('Java'))
+        {
+            await option.click()
+        }
+
+    }
+
 
 
     await page.waitForTimeout(5000);
