@@ -26,12 +26,13 @@ test('Handle dropdowns',async ({page})=> {
     //await expect(content.includes('India')).toBeTruthy();
 
     //4) check presence of value in the dropdown - Approach 2 - using looping
-    const options=await page.$$('#country option')
-    let status=false;
-    for(const option of options)
-    {
-     //console.log(await option.textContent())
+/*    const options=await page.$$('#country option')
+      let status=false;
      
+     for(const option of options)
+     {
+     //console.log(await option.textContent())
+
      let value=await option.textContent();
      if(value.includes('France'))
      {
@@ -40,13 +41,24 @@ test('Handle dropdowns',async ({page})=> {
      }
     }
     expect(status).toBeTruthy();
-
-
+ */
     
+    //5) select option from dropdown using loop  
+     const options=await page.$$('#country option')
+     for(const option of options)
+     {
+        let value=await option.textContent();
+        if(value.includes('France'))
+        {
+         await page.selectOption("#country", value);
+         break;
+        }
+     }   
 
 
 
-    await page.waitForTimeout(2000);
+
+    await page.waitForTimeout(5000);
 
 
 
