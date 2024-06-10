@@ -22,9 +22,15 @@ test ('Handle checkboxes', async({page}) =>{
         await page.locator(locator).check();
     }
 
+    await page.waitForTimeout(5000);
+    
     for(const locator of checkboxeLocators )   //unselect multiple checkboxes which are already selected
     {
-        await page.locator(locator).uncheck();
+        if( await page.locator(locator).isChecked())
+        {
+            await page.locator(locator).uncheck();
+        }
+        
     }
 
     await page.waitForTimeout(5000);
