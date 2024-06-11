@@ -27,14 +27,30 @@ test("handling table",async ({page})=>{
     expect(await rows.count()).toBe(5)
 
     //3) select check box for single product 4
-    const machedRow= rows.filter({
+    /*const machedRow= rows.filter({
         has: page.locator('td'),
         hasText: 'Product 4'
     })
     await machedRow.locator('input').check()
+   */
+
+    //4) select multiple products by re-usable function
+      await selectProduct(rows,page,'Product 1')
+      await selectProduct(rows,page,'Product 3')
+      await selectProduct(rows,page,'Product 5')
+
 
     await page.waitForTimeout(5000);
 
 
 
 })
+
+async function selectProduct(rows, page, name)
+{
+    const machedRow= rows.filter({
+        has: page.locator('td'),
+        hasText: name
+    })
+    await machedRow.locator('input').check()
+}
