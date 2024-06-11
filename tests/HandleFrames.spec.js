@@ -13,6 +13,10 @@ test('frames', async ({ page }) => {
     const frame1=await page.frame({url:'https://ui.vision/demo/webtest/frames/frame_1.html'})
     await frame1.fill("[name='mytext1']",'Hello Deepraj');
 
+    //appraoch 2- using frame locator
+    const inputbox=await page.frameLocator("frame[src='frame_2.html']").locator("[name='mytext2']")
+    inputbox.fill("My Name is Deepraj")
+
 
     await page.waitForTimeout(5000);
 })
