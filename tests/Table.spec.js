@@ -55,7 +55,6 @@ test("handling table",async ({page})=>{
     }
 */
 
-
     //6) read data from all the pages in the table
 
     const pages=await page.locator('.pagination li a')
