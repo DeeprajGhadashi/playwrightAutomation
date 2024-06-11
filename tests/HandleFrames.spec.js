@@ -17,6 +17,5 @@ test('frames', async ({ page }) => {
     const inputbox=await page.frameLocator("frame[src='frame_2.html']").locator("[name='mytext2']")
     inputbox.fill("My Name is Deepraj")
 
-
     await page.waitForTimeout(5000);
 })
