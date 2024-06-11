@@ -29,7 +29,7 @@ test("Date Picker", async ({ page }) => {
         const dates=await page.$$("//a[@class='ui-state-default']")
 
         //date selection using loop
-        for(const dt of dates)
+       /* for(const dt of dates)
         {
             if(await dt.textContent()==date)
             {
@@ -37,7 +37,10 @@ test("Date Picker", async ({ page }) => {
                 break;
             }
         }
-       
+        */
 
-    await page.waitForTimeout(5000);
-})
+        //date selection - wihout loop
+        await page.click(`//a[@class='ui-state-default'][text()='${date}']`)
+       
+        await page.waitForTimeout(5000);
+});
