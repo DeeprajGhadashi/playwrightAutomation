@@ -15,10 +15,10 @@ await page.waitForTimeout(5000);
 
 });
 
-test('Confirmation Dialod-Alert with OK and cancel', async ({ page }) => {
+test.skip('Confirmation Dialog-Alert with OK and cancel', async ({ page }) => {
   await page.goto('https://testautomationpractice.blogspot.com/');
 
-  //Enabling Dilaog window alert handling
+  //Enabling Dilaog window alert handling - Dialogbox-Alert
    page.on('dialog', async dialog=> {
    expect(dialog.type()).toContain('confirm')
    expect(dialog.message()).toContain('Press a button!')
@@ -31,4 +31,22 @@ test('Confirmation Dialod-Alert with OK and cancel', async ({ page }) => {
 
   await page.waitForTimeout(5000);
 
+});
+
+test('Prompt Dialog', async ({ page }) => {
+  await page.goto('https://testautomationpractice.blogspot.com/');
+
+ //Enabling Dilaog window alert handling - prompt type
+  page.on('dialog', async dialog=>{
+    expect(dialog.type()).toContain('prompt')
+    expect(dialog.message()).toContain('Please enter your name:')
+    expect(dialog.defaultValue()).toContain('Harry Potter')
+    await dialog.accept('Deepraj Ghadashi');     
+
+  })
+  await page.click('//button[normalize-space()="Prompt"]');
+  await expect(page.locator('//p[@id="demo"]')).toHaveText('Hello Deepraj Ghadashi! How are you today?')
+
+  await page.waitForTimeout(5000);
+ 
 });
