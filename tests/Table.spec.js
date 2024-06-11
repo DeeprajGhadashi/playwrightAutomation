@@ -42,7 +42,7 @@ test("handling table",async ({page})=>{
 
       
 
-      //4) print all product details using loop
+      //5) print all product details using loop
     for(let i=0;i<await rows.count();i++)
     {
         const row=rows.nth(i);
