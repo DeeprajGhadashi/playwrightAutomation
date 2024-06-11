@@ -16,14 +16,25 @@ test("handling table",async ({page})=>{
     console.log('Number of rows:', await rows.count()) //5
     expect(await rows.count()).toBe(7)
    */
-  
-    // 2) total number of rows & columns  -- PAGINATION TABLE
-    const columns2= await table.locator('thead tr th')
-    console.log('Number of columns:', await columns2.count()) //4
-    expect(await columns2.count()).toBe(4)
 
-    const rows2 =await table.locator('tbody tr')
-    console.log('Number of rows:', await rows2.count()) //5
-    expect(await rows2.count()).toBe(5)
+    // 2) total number of rows & columns  -- PAGINATION TABLE
+    const columns= await table.locator('thead tr th')
+    console.log('Number of columns:', await columns.count()) //4
+    expect(await columns.count()).toBe(4)
+
+    const rows =await table.locator('tbody tr')
+    console.log('Number of rows:', await rows.count()) //5
+    expect(await rows.count()).toBe(5)
+
+    //3) select check box for single product 4
+    const machedRow= rows.filter({
+        has: page.locator('td'),
+        hasText: 'Product 4'
+    })
+    await machedRow.locator('input').check()
+
+    await page.waitForTimeout(5000);
+
+
 
 })
