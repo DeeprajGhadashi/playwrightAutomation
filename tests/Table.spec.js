@@ -35,14 +35,27 @@ test("handling table",async ({page})=>{
    */
 
     //4) select multiple products by re-usable function
-      await selectProduct(rows,page,'Product 1')
-      await selectProduct(rows,page,'Product 3')
-      await selectProduct(rows,page,'Product 5')
+     // await selectProduct(rows,page,'Product 1')
+      //await selectProduct(rows,page,'Product 3')
+      //await selectProduct(rows,page,'Product 5')
 
 
-    await page.waitForTimeout(5000);
+      
+
+      //4) print all product details using loop
+    for(let i=0;i<await rows.count();i++)
+    {
+        const row=rows.nth(i);
+        const tds=row.locator('td')
+
+        for(let j=0 ;j< await tds.count()-1;j++)
+        {
+            console.log(await tds.nth(j).textContent())
+        }
+    }
 
 
+await page.waitForTimeout(5000);
 
 })
 
