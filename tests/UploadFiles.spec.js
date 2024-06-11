@@ -26,4 +26,12 @@ test.only('Multiple Files',async ({page})=>{
     expect (await page.locator('#fileList li:nth-child(2)')).toHaveText('msbte-logo.jpg')
 
     await page.waitForTimeout(3000)
+
+     //Removing files
+     await page.locator('#filesToUpload').setInputFiles([])
+     await page.waitForTimeout(3000)
+
+     expect(await page.locator('#fileList li:nth-child(1)')).toHaveText('No Files Selected')
+
+     await page.waitForTimeout(3000)
 })
