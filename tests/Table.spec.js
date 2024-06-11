@@ -43,7 +43,7 @@ test("handling table",async ({page})=>{
       
 
       //5) print all product details using loop
-    for(let i=0;i<await rows.count();i++)
+   /* for(let i=0;i<await rows.count();i++)
     {
         const row=rows.nth(i);
         const tds=row.locator('td')
@@ -53,12 +53,40 @@ test("handling table",async ({page})=>{
             console.log(await tds.nth(j).textContent())
         }
     }
+*/
+
+
+    //6) read data from all the pages in the table
+
+    const pages=await page.locator('.pagination li a')
+    console.log('Number of pages in the table:', await pages.count())
+
+    for(let p=0 ;p< await pages.count(); p++)
+  {
+      if(p>0)
+      {
+          await pages.nth(p).click()
+      }
+      for(let i=0;i<await rows.count();i++)
+      {
+        const row=rows.nth(i);
+        const tds=row.locator('td')
+
+        for(let j=0 ;j< await tds.count()-1;j++)
+        {
+            console.log(await tds.nth(j).textContent())
+        } 
+    }
+    await page.waitForTimeout(3000);
+
+   }
 
 
 await page.waitForTimeout(5000);
 
 })
 
+/*
 async function selectProduct(rows, page, name)
 {
     const machedRow= rows.filter({
@@ -67,3 +95,4 @@ async function selectProduct(rows, page, name)
     })
     await machedRow.locator('input').check()
 }
+*/
