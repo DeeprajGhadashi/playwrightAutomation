@@ -5,3 +5,7 @@ test('page screenshot', async ({ page }) => {
  await page.screenshot({ path:'tests/screenshots/'+Date.now()+'HomePage.png'})
 });
 
+test('Full page screenshot', async ({ page }) => {
+    await page.goto('https://demo.opencart.com/')
+    await page.screenshot({ path:'tests/screenshots/'+Date.now()+'FullPage.png',fullPage:true})
+});
