@@ -22,7 +22,7 @@ https://playwright.dev/docs/intro
       
 ## Allure Reports for playwright
 
-1)Installation of "allure-playwright" module
+1) Installation of "allure-playwright" module
 
 npm i-D @playwright/test allure-playwright
 
