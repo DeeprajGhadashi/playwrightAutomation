@@ -13,7 +13,7 @@ test.skip('test2', async({page})=>{
 //skip approach 2
 test('test3', async({page, browserName})=>{
     console.log('this is test3')
-    if(browserName==='chromium')
+    if(browserName==='firefox')
     {
         test.skip()
     }
