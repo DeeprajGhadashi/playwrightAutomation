@@ -16,9 +16,31 @@
     "preserveOutput": "always",
     "reporter": [
       [
+        "list",
+        null
+      ],
+      [
+        "html",
+        null
+      ],
+      [
+        "line",
+        null
+      ],
+      [
+        "dot",
+        null
+      ],
+      [
         "json",
         {
           "outputFile": "results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "results.xml"
         }
       ]
     ],
@@ -99,12 +121,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 3152,
+                  "duration": 5969,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-06-12T17:20:10.144Z",
+                  "startTime": "2024-06-12T17:47:23.531Z",
                   "attachments": []
                 }
               ],
@@ -131,12 +153,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 3272,
+                  "duration": 5937,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-06-12T17:20:10.141Z",
+                  "startTime": "2024-06-12T17:47:23.579Z",
                   "attachments": []
                 }
               ],
@@ -161,14 +183,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "status": "passed",
-                  "duration": 1655,
+                  "duration": 1742,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-06-12T17:20:13.603Z",
+                  "startTime": "2024-06-12T17:47:30.353Z",
                   "attachments": []
                 }
               ],
@@ -185,8 +207,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-06-12T17:20:09.229Z",
-    "duration": 6213.098,
+    "startTime": "2024-06-12T17:47:21.133Z",
+    "duration": 11541.880000000001,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,
