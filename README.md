@@ -36,7 +36,7 @@ sudo npm install -g allure-commandline --save-dev
 
 3) playwright.config.js
 
-reporter = ['allure-playwright', {outputfolder: 'my-allure-results'}]
+reporter = ['allure-playwright', {outputfolder: 'allure-results'}]
 OR
 npx playwright test --reporter = allure-playwright
 
@@ -45,3 +45,9 @@ npx playwright test --reporter = allure-playwright
 npx playwright test tests/Reporters.spec.js
 
 5) General Allure Report
+
+ npx allure generate allure-results -o allure-report --clean
+ 
+6) Open Allure Report
+
+ npx allure open allure-report
