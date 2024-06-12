@@ -41,10 +41,17 @@ test('test4', async({page})=>{
 })
  */
 
-test('test6', async({page, browserName})=>{
+/* test('test6', async({page, browserName})=>{
     console.log('this is test6....')
     if(browserName==='firefox')
     {
     test.fail()  //exp
     }
+})
+*/
+
+//Slow
+test('test7', async({page})=>{
+    await page.goto('https://www.demoblaze.com/index.html')
+    console.log('this is test 7..')
 })
