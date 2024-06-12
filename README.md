@@ -20,4 +20,28 @@
 Documentation of Playwright :-
 https://playwright.dev/docs/intro
       
-      
+##Allure Reports for playwright
+
+1)Installation of "allure-playwright" module
+
+npm i-D @playwright/test allure-playwright
+
+2) Installing Allure command line
+
+Ref: https://www.npmjs.com/package/allure-commandline
+
+npm install -g allure-commandline --save-dev
+OR
+sudo npm install -g allure-commandline --save-dev
+
+3) playwright.config.js
+
+reporter = ['allure-playwright', {outputfolder: 'my-allure-results'}]
+OR
+npx playwright test --reporter = allure-playwright
+
+4) Run the tests
+
+npx playwright test tests/Reporters.spec.js
+
+5) General Allure Report
