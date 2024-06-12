@@ -32,9 +32,19 @@ test('test4', async({page})=>{
 })
 */
 
-//Fail
-test('test5', async({page})=>{
+//Fail  ( negative testing )
+/*
+ test('test5', async({page})=>{
     test.fail()  //exp
     console.log('this is test5....')
     expect(1).toBe(2); //actual  //If both exp & Actual is failed then test pass
+})
+ */
+
+test('test6', async({page, browserName})=>{
+    console.log('this is test6....')
+    if(browserName==='chromium')
+    {
+    test.fail()  //exp
+    }
 })
