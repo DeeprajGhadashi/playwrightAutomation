@@ -42,6 +42,12 @@
         {
           "outputFile": "results.xml"
         }
+      ],
+      [
+        "G:\\playwrightAutomation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        {
+          "outputFolder": "my-allure-results"
+        }
       ]
     ],
     "reportSlowTests": {
@@ -121,12 +127,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 5969,
+                  "duration": 4999,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-06-12T17:47:23.531Z",
+                  "startTime": "2024-06-12T19:51:32.840Z",
                   "attachments": []
                 }
               ],
@@ -153,12 +159,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 5937,
+                  "duration": 5358,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-06-12T17:47:23.579Z",
+                  "startTime": "2024-06-12T19:51:32.826Z",
                   "attachments": []
                 }
               ],
@@ -183,14 +189,14 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "status": "passed",
-                  "duration": 1742,
+                  "duration": 1872,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-06-12T17:47:30.353Z",
+                  "startTime": "2024-06-12T19:51:38.428Z",
                   "attachments": []
                 }
               ],
@@ -201,15 +207,207 @@
           "file": "Reporters.spec.js",
           "line": 14,
           "column": 1
+        },
+        {
+          "title": "Test1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 5089,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-12T19:51:39.519Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "399bcd1299f62012f68d-d9e3ae9db2d661dde063",
+          "file": "Reporters.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Test2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 3699,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-12T19:51:42.366Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "399bcd1299f62012f68d-bb02084a571b6c75d188",
+          "file": "Reporters.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "Test3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 2301,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-12T19:51:46.106Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "399bcd1299f62012f68d-2c6a174eeade4eec8a38",
+          "file": "Reporters.spec.js",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "Test1",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 2371,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-12T19:51:49.391Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "399bcd1299f62012f68d-9e413f90102ade627908",
+          "file": "Reporters.spec.js",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Test2",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "status": "passed",
+                  "duration": 2588,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-12T19:51:50.288Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "399bcd1299f62012f68d-7377bf78bdec208b6fae",
+          "file": "Reporters.spec.js",
+          "line": 8,
+          "column": 1
+        },
+        {
+          "title": "Test3",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "status": "passed",
+                  "duration": 2426,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-06-12T19:51:51.913Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "399bcd1299f62012f68d-c6b856f608996e5115f6",
+          "file": "Reporters.spec.js",
+          "line": 14,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-06-12T17:47:21.133Z",
-    "duration": 11541.880000000001,
-    "expected": 3,
+    "startTime": "2024-06-12T19:51:32.145Z",
+    "duration": 22254.283000000003,
+    "expected": 9,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

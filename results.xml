@@ -1,10 +1,26 @@
-<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="11.54188">
-<testsuite name="Reporters.spec.js" timestamp="2024-06-12T17:47:22.233Z" hostname="chromium" tests="3" failures="0" skipped="0" time="13.648" errors="0">
-<testcase name="Test1" classname="Reporters.spec.js" time="5.969">
+<testsuites id="" name="" tests="9" failures="0" skipped="0" errors="0" time="22.254283000000004">
+<testsuite name="Reporters.spec.js" timestamp="2024-06-12T19:51:32.178Z" hostname="chromium" tests="3" failures="0" skipped="0" time="12.229" errors="0">
+<testcase name="Test1" classname="Reporters.spec.js" time="4.999">
 </testcase>
-<testcase name="Test2" classname="Reporters.spec.js" time="5.937">
+<testcase name="Test2" classname="Reporters.spec.js" time="5.358">
 </testcase>
-<testcase name="Test3" classname="Reporters.spec.js" time="1.742">
+<testcase name="Test3" classname="Reporters.spec.js" time="1.872">
+</testcase>
+</testsuite>
+<testsuite name="Reporters.spec.js" timestamp="2024-06-12T19:51:32.178Z" hostname="firefox" tests="3" failures="0" skipped="0" time="11.089" errors="0">
+<testcase name="Test1" classname="Reporters.spec.js" time="5.089">
+</testcase>
+<testcase name="Test2" classname="Reporters.spec.js" time="3.699">
+</testcase>
+<testcase name="Test3" classname="Reporters.spec.js" time="2.301">
+</testcase>
+</testsuite>
+<testsuite name="Reporters.spec.js" timestamp="2024-06-12T19:51:32.178Z" hostname="webkit" tests="3" failures="0" skipped="0" time="7.385" errors="0">
+<testcase name="Test1" classname="Reporters.spec.js" time="2.371">
+</testcase>
+<testcase name="Test2" classname="Reporters.spec.js" time="2.588">
+</testcase>
+<testcase name="Test3" classname="Reporters.spec.js" time="2.426">
 </testcase>
 </testsuite>
 </testsuites>

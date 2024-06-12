@@ -21,7 +21,7 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  //reporter: 'list',
+  //reporter: 'html',
   //reporter: [['json',{outputFile:'results.json'}]],
   //reporter: [['junit',{outputFile:'results.xml'}]],
   reporter: [ ['list'],
@@ -29,9 +29,11 @@ module.exports = defineConfig({
               ['line'],
               ['dot'],
               ['json',{outputFile:'results.json'}],
-              ['junit',{outputFile:'results.xml'}]
+              ['junit',{outputFile:'results.xml'}],
+              ['allure-playwright', {outputFolder: 'allure-results' }]
             ],
 
+   
 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
