@@ -1,9 +1,10 @@
 const {test, expect}=require('@playwright/test')
 
 // only
-test('test1', async({page})=>{
+/*test.only('test1', async({page})=>{
     console.log('this is test1')
 })
+*/
 
 /*
 //skip approach 1
@@ -23,8 +24,17 @@ test('test3', async({page, browserName})=>{
 */
 
 //Fixme
+/*
 test('test4', async({page})=>{
     test.fixme()
     console.log('this is test 4..')
 
+})
+*/
+
+//Fail
+test('test5', async({page})=>{
+    test.fail()  //exp
+    console.log('this is test5....')
+    expect(1).toBe(1); //actual
 })
