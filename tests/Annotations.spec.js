@@ -36,5 +36,5 @@ test('test4', async({page})=>{
 test('test5', async({page})=>{
     test.fail()  //exp
     console.log('this is test5....')
-    expect(1).toBe(1); //actual
+    expect(1).toBe(2); //actual  //If both exp & Actual is failed then test pass
 })
