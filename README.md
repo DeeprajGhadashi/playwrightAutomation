@@ -20,7 +20,7 @@
 Documentation of Playwright :-
 https://playwright.dev/docs/intro
       
-##Allure Reports for playwright
+## Allure Reports for playwright
 
 1)Installation of "allure-playwright" module
 
