@@ -52,6 +52,7 @@ test('test4', async({page})=>{
 
 //Slow
 test('test7', async({page})=>{
+    test.slow();
     await page.goto('https://www.demoblaze.com/index.html')
     console.log('this is test 7..')
 })
