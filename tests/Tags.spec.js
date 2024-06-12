@@ -16,7 +16,6 @@ test('test4@reg',async({page})=>{
     console.log('this is my test4...')
 })
 
-
 test('test5@sanity@reg',async({page})=>{
     console.log('this is my test5...')
 })
