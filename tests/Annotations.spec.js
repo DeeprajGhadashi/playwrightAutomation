@@ -43,7 +43,7 @@ test('test4', async({page})=>{
 
 test('test6', async({page, browserName})=>{
     console.log('this is test6....')
-    if(browserName==='chromium')
+    if(browserName==='firefox')
     {
     test.fail()  //exp
     }
