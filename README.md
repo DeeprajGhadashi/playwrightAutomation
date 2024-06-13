@@ -51,3 +51,7 @@ npx playwright test tests/Reporters.spec.js
 6) Open Allure Report
 
  npx allure open allure-report
+
+## Rest API Testing | HTTP Requests | GET , POST , PUT , DELETE 
+
+used for API Testing API's from https://reqres.in/
