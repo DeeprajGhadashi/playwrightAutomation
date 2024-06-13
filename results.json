@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -46,7 +46,7 @@
       [
         "G:\\playwrightAutomation\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
         {
-          "outputFolder": "my-allure-results"
+          "outputFolder": "allure-results"
         }
       ]
     ],
@@ -59,7 +59,7 @@
       {
         "outputDir": "G:/playwrightAutomation/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 3,
         "metadata": {},
         "id": "chromium",
         "name": "chromium",
@@ -73,7 +73,7 @@
       {
         "outputDir": "G:/playwrightAutomation/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 3,
         "metadata": {},
         "id": "firefox",
         "name": "firefox",
@@ -87,7 +87,7 @@
       {
         "outputDir": "G:/playwrightAutomation/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 3,
         "metadata": {},
         "id": "webkit",
         "name": "webkit",
@@ -107,14 +107,14 @@
   },
   "suites": [
     {
-      "title": "Reporters.spec.js",
-      "file": "Reporters.spec.js",
+      "title": "RetryTest.spec.js",
+      "file": "RetryTest.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Test1",
-          "ok": true,
+          "title": "test",
+          "ok": false,
           "tags": [],
           "tests": [
             {
@@ -126,290 +126,195 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 4999,
-                  "errors": [],
-                  "stdout": [],
+                  "status": "failed",
+                  "duration": 18115,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at G:\\playwrightAutomation\\tests\\RetryTest.spec.js:26:25",
+                    "location": {
+                      "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                      "column": 25,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 25 |\u001b[39m    \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m    expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  \n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                        "column": 25,
+                        "line": 26
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n\u001b[0m \u001b[90m 24 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 25 |\u001b[39m    \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m    expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  \n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at G:\\playwrightAutomation\\tests\\RetryTest.spec.js:26:25\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Nexus 6\n"
+                    }
+                  ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-06-12T19:51:32.840Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-95434237692cbd161c3b",
-          "file": "Reporters.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "Test2",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+                  "startTime": "2024-06-13T07:08:39.843Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "G:\\playwrightAutomation\\test-results\\RetryTest-test-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                    "column": 25,
+                    "line": 26
+                  }
+                },
                 {
                   "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 5358,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 17087,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at G:\\playwrightAutomation\\tests\\RetryTest.spec.js:26:25",
+                    "location": {
+                      "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                      "column": 25,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 25 |\u001b[39m    \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m    expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  \n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                        "column": 25,
+                        "line": 26
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 24 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 25 |\u001b[39m    \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m    expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  \n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at G:\\playwrightAutomation\\tests\\RetryTest.spec.js:26:25\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-06-12T19:51:32.826Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-064de90a5d2bda0e3e44",
-          "file": "Reporters.spec.js",
-          "line": 8,
-          "column": 1
-        },
-        {
-          "title": "Test3",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 1872,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-06-12T19:51:38.428Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-6ef640acef5b31d772c8",
-          "file": "Reporters.spec.js",
-          "line": 14,
-          "column": 1
-        },
-        {
-          "title": "Test1",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
+                  "retry": 1,
+                  "startTime": "2024-06-13T07:09:01.355Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "G:\\playwrightAutomation\\test-results\\RetryTest-test-chromium-retry1\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                    "column": 25,
+                    "line": 26
+                  }
+                },
                 {
                   "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 5089,
-                  "errors": [],
-                  "stdout": [],
+                  "status": "failed",
+                  "duration": 16593,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n    at G:\\playwrightAutomation\\tests\\RetryTest.spec.js:26:25",
+                    "location": {
+                      "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                      "column": 25,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 25 |\u001b[39m    \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m    expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  \n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                        "column": 25,
+                        "line": 26
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mtrue\u001b[39m\n\n\u001b[0m \u001b[90m 24 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 25 |\u001b[39m    \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m    expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  \n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at G:\\playwrightAutomation\\tests\\RetryTest.spec.js:26:25\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Nexus 6\n"
+                    }
+                  ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-06-12T19:51:39.519Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-d9e3ae9db2d661dde063",
-          "file": "Reporters.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "Test2",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
+                  "retry": 2,
+                  "startTime": "2024-06-13T07:09:21.411Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "G:\\playwrightAutomation\\test-results\\RetryTest-test-chromium-retry2\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                    "column": 25,
+                    "line": 26
+                  }
+                },
                 {
                   "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 3699,
-                  "errors": [],
+                  "status": "failed",
+                  "duration": 20209,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at G:\\playwrightAutomation\\tests\\RetryTest.spec.js:26:25",
+                    "location": {
+                      "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                      "column": 25,
+                      "line": 26
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 25 |\u001b[39m    \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m    expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  \n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                        "column": 25,
+                        "line": 26
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mfalse\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 24 |\u001b[39m    \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m3000\u001b[39m)\n \u001b[90m 25 |\u001b[39m    \u001b[36mconst\u001b[39m status\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m cart\u001b[33m.\u001b[39mcheckProductInCart(\u001b[32m'Nexus 6'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m    expect(\u001b[36mawait\u001b[39m status)\u001b[33m.\u001b[39mtoBe(\u001b[36mfalse\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m  \n \u001b[90m 28 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at G:\\playwrightAutomation\\tests\\RetryTest.spec.js:26:25\u001b[22m"
+                    }
+                  ],
                   "stdout": [],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-06-12T19:51:42.366Z",
-                  "attachments": []
+                  "retry": 3,
+                  "startTime": "2024-06-13T07:09:39.879Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "G:\\playwrightAutomation\\test-results\\RetryTest-test-chromium-retry3\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "G:\\playwrightAutomation\\tests\\RetryTest.spec.js",
+                    "column": 25,
+                    "line": 26
+                  }
                 }
               ],
-              "status": "expected"
+              "status": "unexpected"
             }
           ],
-          "id": "399bcd1299f62012f68d-bb02084a571b6c75d188",
-          "file": "Reporters.spec.js",
-          "line": 8,
-          "column": 1
-        },
-        {
-          "title": "Test3",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "firefox",
-              "projectName": "firefox",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 2301,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-06-12T19:51:46.106Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-2c6a174eeade4eec8a38",
-          "file": "Reporters.spec.js",
-          "line": 14,
-          "column": 1
-        },
-        {
-          "title": "Test1",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 2371,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-06-12T19:51:49.391Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-9e413f90102ade627908",
-          "file": "Reporters.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "Test2",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 2588,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-06-12T19:51:50.288Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-7377bf78bdec208b6fae",
-          "file": "Reporters.spec.js",
-          "line": 8,
-          "column": 1
-        },
-        {
-          "title": "Test3",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "webkit",
-              "projectName": "webkit",
-              "results": [
-                {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 2426,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2024-06-12T19:51:51.913Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "399bcd1299f62012f68d-c6b856f608996e5115f6",
-          "file": "Reporters.spec.js",
-          "line": 14,
-          "column": 1
+          "id": "2c48ef0e88569fb8b334-a3619fc5a0cd52aa995a",
+          "file": "RetryTest.spec.js",
+          "line": 6,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-06-12T19:51:32.145Z",
-    "duration": 22254.283000000003,
-    "expected": 9,
+    "startTime": "2024-06-13T07:08:39.048Z",
+    "duration": 82173.79100000001,
+    "expected": 0,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
